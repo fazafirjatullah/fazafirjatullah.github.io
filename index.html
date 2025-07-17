@@ -14,8 +14,8 @@
   <header data-aos="fade-down">
     <nav>
       <div class="logo">Faza Firjatullah Alvi</div>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <ul class="nav-links">
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -222,10 +222,13 @@
     });
   </script>
   <script>
-    function toggleMenu() {
-      const navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('show');
-    }
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+     navLinks.classList.toggle("active");
+    });
   </script>
+
 </body>
 </html>
