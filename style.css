@@ -417,39 +417,44 @@ footer {
   }
 }
 
-/* Tombol menu toggle (hamburger) */
+/* === TOGGLE BUTTON === */
 .menu-toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color: #f0f0f0;
   background: none;
   border: none;
-  color: #f0f0f0;
   cursor: pointer;
+  z-index: 200;
 }
 
-/* Responsive NAVBAR */
+/* === RESPONSIVE NAVBAR === */
 @media (max-width: 768px) {
   nav {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
 
   .menu-toggle {
     display: block;
+    position: absolute;
+    right: 1.5rem; /* Toggle di kanan */
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
+    background: #1e1e1e;
     position: absolute;
     top: 100%;
     right: 0;
-    background: #1e1e1e;
     width: 100%;
-    text-align: right;
     padding: 1rem 2rem;
-    z-index: 99;
+    text-align: right;
+    z-index: 150;
   }
 
   .nav-links.active {
