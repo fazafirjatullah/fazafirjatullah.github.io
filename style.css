@@ -11,6 +11,17 @@ body {
   color: #f0f0f0;
   background-color: #121212;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+p, h2, h3, a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* AOS Animation */
@@ -84,10 +95,53 @@ nav {
   left: 0;
   width: 100vw;
   height: 80vh;
+  max-height: 100%;
   object-fit: cover;
   z-index: -1;
   filter: brightness(0.4);
   pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p,
+  .hero-subheading {
+    font-size: 0.95rem;
+  }
+
+  .hero-links {
+    gap: 0.8rem;
+  }
+
+  .tools-grid img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+
+  .education-item, .contact p {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
