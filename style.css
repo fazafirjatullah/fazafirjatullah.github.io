@@ -420,18 +420,19 @@ footer {
 /* Tombol menu toggle (hamburger) */
 .menu-toggle {
   display: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: none;
   border: none;
-  color: white;
+  color: #f0f0f0;
   cursor: pointer;
 }
 
-/* Responsive menu behavior */
+/* Responsive NAVBAR */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .menu-toggle {
@@ -441,13 +442,21 @@ footer {
   .nav-links {
     display: none;
     flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #1e1e1e;
     width: 100%;
-    gap: 1rem;
-    background-color: #1e1e1e;
+    text-align: right;
     padding: 1rem 2rem;
+    z-index: 99;
   }
 
-  .nav-links.show {
+  .nav-links.active {
     display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.8rem 0;
   }
 }
