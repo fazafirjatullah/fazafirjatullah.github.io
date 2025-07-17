@@ -90,6 +90,13 @@ nav {
   pointer-events: none;
 }
 
+@media (max-width: 768px) {
+  #bg-video {
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
 .hero-content {
   display: flex;
   flex-wrap: wrap;
